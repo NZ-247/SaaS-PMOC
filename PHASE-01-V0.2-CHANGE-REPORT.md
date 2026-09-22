@@ -8,6 +8,7 @@
 **Origem de todas as alterações:** **Services.NET Phase 1 Audit — Approved**
 **Status:** Aguardando segunda revisão formal da Services.NET
 **Autor:** Opus — análise, arquitetura, documentação, modelagem, revisão e planejamento
+**Finalização local:** Codex — revisão pós-Opus, higienização do repositório e atualização de rastreabilidade
 
 ---
 
@@ -24,7 +25,7 @@ Os quatro efeitos de maior peso:
 3. **A tensão entre CAP-033 e o critério de MVP foi eliminada** pela separação entre capacidade estrutural (admitida no MVP) e conteúdo regulatório concreto (não carregado sem validação).
 4. **Prescrições prematuras foram removidas**: `TenantId` como coluna física, assinatura simples como suficiente, checklist obrigatório para toda OS e API obrigatória para toda funcionalidade de interface.
 
-A validação cruzada revelou ainda um **erro de consolidação não apontado pela auditoria**: a v0.1 declarava 77 capacidades e 43 no MVP; a contagem real do catálogo é **79 e 50**. O catálogo estava correto; a tabela de consolidação estava errada. Corrigido.
+A validação cruzada revelou ainda um **erro de consolidação não apontado pela auditoria**: a v0.1 declarava a consolidação **77/43**; a contagem real do catálogo é **79/50**. O catálogo estava correto; a tabela de consolidação estava errada. Corrigido.
 
 ---
 
@@ -59,7 +60,7 @@ A validação cruzada revelou ainda um **erro de consolidação não apontado pe
 | CHG-16 | Todos | Cabeçalhos | Versão 0.2 DRAFT; status "Aguardando segunda revisão formal"; origem das alterações declarada | Auditoria §18 | Controle de versão |
 | CHG-17 | DOC-006, DOC-007, DOC-001 | DOC-006 §4, DOC-007 §3, DOC-001 §15 | Consolidação de capacidades corrigida de 77/43 para **79/50** | Validação cruzada (§22 da auditoria) | Coerência entre artefatos |
 
-Registro operacional equivalente na aba **Change Control** de XLS-004 (15 itens, incluindo AUDIT-01).
+Registro operacional equivalente na aba **Change Control** de XLS-004 (16 itens, incluindo AUDIT-01 e CODEX-REVIEW-01).
 
 ---
 
@@ -72,7 +73,7 @@ Registro operacional equivalente na aba **Change Control** de XLS-004 (15 itens,
 | R3 | **Regra A × Regra B** | INC-003 tratava o tema como divergência sobre limiar de 60.000 BTU/h | §5.3 do DOC-001 define duas regras distintas e veda o uso automático do limite como condição única de existência de PMOC |
 | R4 | **Portaria GM/MS nº 3.523/1998** | "Situação de vigência a confirmar"; redação sugeria ausência de evidência de aplicação | Reconhecida a disponibilidade em fonte oficial, a referência em documentação regulatória posterior e as fortes evidências de aplicação atual. **Vigência jurídica formal continua não declarada** — OQ-012 reformulada |
 
-**Limite declarado desta execução.** A existência da orientação oficial da ANVISA de 2025 foi informada pela auditoria da Services.NET e é registrada como tal. A **referência bibliográfica exata** dessa orientação (documento, identificação, URL e data de publicação) **não foi confirmada em fonte primária** nesta execução e permanece pendente de registro na matriz regulatória — **OQ-019 (nova)**. Nenhum parâmetro, limite, faixa ou periodicidade da ABNT NBR 17037 foi reproduzido ou carregado.
+**Finalização local por Codex.** A referência oficial foi confirmada e registrada: **Guia nº 73/2024, versão 2, de 03/04/2025 — Guia de boas práticas em células e tecidos humanos para uso terapêutico**, Agência Nacional de Vigilância Sanitária (ANVISA), Biblioteca Digital da Anvisa, item 17752; vigente a partir de 04/04/2025. O guia é instrumento regulatório **não normativo**, de caráter recomendatório e não vinculante. **OQ-019 foi respondida/encerrada.** Nenhum parâmetro, limite, faixa ou periodicidade da ABNT NBR 17037 foi reproduzido ou carregado.
 
 ---
 
@@ -85,8 +86,8 @@ Registro operacional equivalente na aba **Change Control** de XLS-004 (15 itens,
 | C3 | **Assinatura** | Simultaneamente hipótese do MVP (ASM-012), capacidade "A validar" (CAP-054) e item fora do MVP | Estado único: **A validar**, sem nível presumido, em todos os artefatos |
 | C4 | **AC-MVP-03** | Exigia checklist para toda OS concluída | Requisitos obrigatórios de execução por tipo de OS e template, incluindo checklist quando requerido |
 | C5 | **AC-MVP-08** | "Toda funcionalidade da UI existe como operação de API documentada" | Contrato para operação de negócio ou server-side; comportamento local não exige endpoint |
-| C6 | **Consolidação de capacidades** | 77 capacidades, 43 MVP, 21 Pós-MVP, 7 Futuro, 6 A validar | **79 capacidades, 50 MVP, 19 Pós-MVP, 5 Futuro, 5 A validar** — catálogo inalterado, tabela corrigida, com verificação por domínio |
-| C7 | **Summary de XLS-001** | 13 restrições e 10 dependências (contava o cabeçalho) | Fórmulas corrigidas; valores conferidos linha a linha |
+| C6 | **Consolidação de capacidades** | Consolidação histórica 77/43/21/7/6 | **79 capacidades, 50 MVP, 19 Pós-MVP, 5 Futuro, 5 A validar** — catálogo inalterado, tabela corrigida, com verificação por domínio |
+| C7 | **Summary de XLS-001** | Restrições e dependências contavam a linha de cabeçalho | Fórmulas corrigidas; valores conferidos linha a linha |
 | C8 | **Terminologia** | Uso alternado de "cliente", "sistema", "ativo", "checklist" | Tabela oficial em DOC-003 §11, aplicada a todos os artefatos |
 
 ---
@@ -103,15 +104,15 @@ Registro operacional equivalente na aba **Change Control** de XLS-004 (15 itens,
 
 ---
 
-## F. Novas questões abertas
+## F. Questões novas da v0.2 — estado após finalização local
 
 | ID | Questão (resumo) | Autoridade | Prioridade | Origem |
 | --- | --- | --- | --- | --- |
-| **OQ-019** | Referência oficial exata (documento, identificação, URL e data) da orientação da ANVISA que indica a ABNT NBR 17037, para registro na matriz regulatória | Jurídico (STK-007) | Alta | Auditoria §3 + limite declarado desta execução |
+| **OQ-019** | Referência oficial exata da orientação da ANVISA que indica a ABNT NBR 17037 como referência de qualidade do ar interior | Respondida por Codex | Encerrada | Guia nº 73/2024, versão 2, de 03/04/2025; Biblioteca Digital da Anvisa, item 17752 |
 | **OQ-020** | Mecanismo que preservará o estado de referência de um PMOC emitido | Architect (STK-003) | Alta | Auditoria §16 |
-| **OQ-021** | Critérios formais da Regra A e da Regra B, e se o limite de 5 TR / 60.000 BTU/h integra ou não a Regra A | Jurídico (STK-007) + Resp. técnico (STK-012) | Alta | Auditoria §4 |
+| **OQ-021** | Exigências estaduais, municipais, setoriais, contratuais ou situações de uso restrito que possam afetar Regra A / Regra B | Jurídico (STK-007) + Resp. técnico (STK-012) | Alta | Reformulada por Codex; no contexto federal, 5 TR / 60.000 BTU/h fundamenta a Regra B, não uma condição geral da Regra A |
 
-**Removidas:** nenhuma. Total: 18 → **21**.
+Total histórico: 18 → **21 registradas**. Estado após Codex: **20 abertas**, **1 respondida/encerrada**.
 
 ---
 
@@ -129,13 +130,23 @@ Registro operacional equivalente na aba **Change Control** de XLS-004 (15 itens,
 
 ### OQ-012
 - **Antes:** "A Portaria GM/MS 3.523/1998 permanece vigente e em que extensão?" — com observação que sugeria ausência de evidência de aplicação.
-- **Agora:** "Confirmar formalmente eventual alteração, revogação, consolidação ou extensão atual da Portaria GM/MS nº 3.523/1998 para fins da matriz regulatória oficial do produto, incluindo o limite de capacidade nela previsto e sua relação com a exigência de responsável técnico (Regra B)."
-- **Razão:** há fortes evidências de aplicação atual. O que falta é confirmação jurídica formal — não evidência de uso.
+- **Agora:** "Confirmar formalmente eventual alteração, revogação, consolidação ou extensão atual da Portaria GM/MS nº 3.523/1998 para fins da matriz regulatória oficial do produto. O Art. 6º e sua redação sobre o limite acima de 5 TR (15.000 kcal/h = 60.000 BTU/h) e responsável técnico já estão identificados em fonte oficial."
+- **Razão:** a fonte oficial responde artigo e redação. O que falta é confirmação jurídica formal — não evidência de uso nem identificação do Art. 6º.
 
 ### OQ-015
 - **Antes:** responsável "Jurídico/DPO".
 - **Agora:** responsável **DPO (STK-021)**; redação ampliada para prazos de retenção e direitos de titular.
 - **Razão:** separação de autoridades (auditoria §12).
+
+### OQ-010
+- **Antes:** cliente-piloto descrito genericamente como não confirmado.
+- **Agora:** a existência de cliente candidato/piloto é tratada como confirmada pelo contexto de origem; permanecem pendentes a identidade formal do tenant-piloto, interlocutores, disponibilidade para levantamento, compromisso de operar o MVP e agenda da Fase 2.
+- **Razão:** evitar transformar em desconhecido o que o contexto do projeto já confirma, sem inventar nome, CNPJ ou pessoas.
+
+### OQ-021
+- **Antes:** perguntava se o limite de 5 TR / 60.000 BTU/h integrava ou não a Regra A.
+- **Agora:** trata somente de normas estaduais, municipais, regulamentações setoriais específicas, exigências contratuais e situações de uso restrito.
+- **Razão:** no contexto federal documentado, o limite está associado à Regra B pelo Art. 6º da Portaria GM/MS nº 3.523/1998, não a um limiar geral de existência de PMOC.
 
 ---
 
@@ -185,7 +196,7 @@ Para demonstrar ausência de scope creep:
 
 ### J.1 Validação cruzada executada
 
-Verificação entre DOC-001 a DOC-008, XLS-001 a XLS-005, DIA-001, Overview_Project.md (patch) e PHASE-01-REVIEW.md.
+Verificação entre DOC-001 a DOC-008, XLS-001 a XLS-005, DIA-001, Overview_Project.md e PHASE-01-REVIEW.md.
 
 **Contagens — conferidas e coerentes entre documento e planilha:**
 
@@ -195,17 +206,17 @@ Verificação entre DOC-001 a DOC-008, XLS-001 a XLS-005, DIA-001, Overview_Proj
 | Hipóteses | 12 | XLS-001 Assumptions + Summary |
 | Restrições | 12 | XLS-001 Constraints + Summary; DOC-001 §19 |
 | Dependências | 10 | XLS-001 Dependencies + Summary |
-| Questões abertas | 21 | XLS-003 + Summary |
+| Questões registradas | 21 (20 abertas; 1 encerrada) | XLS-003 + Summary |
 | Riscos | 19 | XLS-002 + Summary |
-| Decisões | 10, todas `Proposta` | XLS-004 + Summary |
+| Decisões | 11, todas `Proposta` | XLS-004 + Summary |
 | ADRs indexados | 8, nenhum decidido | XLS-004 ADR Register; DOC-008 §5 |
 | Critérios de aceite do MVP | 11 | DOC-007 §6 |
 | Linhas semente da RTM | 13 | XLS-005 + Summary |
-| Itens de controle de mudança | 15 (AUDIT-01 + CHG-01 a CHG-14) | XLS-004 Change Control |
+| Itens de controle de mudança | 16 (AUDIT-01 + CHG-01 a CHG-14 + CODEX-REVIEW-01) | XLS-004 Change Control |
 
 **Estados:** nenhuma capacidade aparece com mais de uma classificação. A única situação de dupla natureza — CAP-033 — foi resolvida por regra formal (DOC-003 §2, parágrafo final): a classificação recai sobre a capacidade, e a restrição sobre o conteúdo é declarada no próprio item.
 
-**IDs:** nenhum duplicado; nenhum reaproveitado para conceito diferente. STK-021, DEP-010, RSK-019, OQ-019 a OQ-021, COMP-002 a COMP-004, FR-002, NFR-002, AC-MVP-11, AC-SCOPE-05, OOS-015, GAP-006 e PP-13 são identificadores novos.
+**IDs:** nenhum duplicado; nenhum reaproveitado para conceito diferente. STK-021, DEP-010, RSK-019, OQ-019 a OQ-021, DEC-011, COMP-002 a COMP-004, FR-002, NFR-002, AC-MVP-11, AC-SCOPE-05, OOS-015, GAP-006 e PP-13 são identificadores novos.
 
 **Referências:** todas as referências a §, CAP, OQ, ASM, RSK, DEC, ADR, STK, DEP e CON foram verificadas contra os registros existentes. Nenhuma referência pendente foi localizada.
 
@@ -215,9 +226,9 @@ Verificação entre DOC-001 a DOC-008, XLS-001 a XLS-005, DIA-001, Overview_Proj
 
 | ID | Inconsistência | Natureza | Encaminhamento |
 | --- | --- | --- | --- |
-| RES-01 | A referência bibliográfica exata da orientação da ANVISA de 2025 não foi confirmada em fonte primária nesta execução | Rastreabilidade de fonte | OQ-019 |
-| RES-02 | O artigo específico e a redação do limite de 5 TR / 60.000 BTU/h na Portaria GM/MS nº 3.523/1998 não foram citados nominalmente; a Regra B refere-se ao "limite de capacidade nela previsto" | Precisão normativa | OQ-012, OQ-021 |
-| RES-03 | `Overview_Project.md` não estava disponível neste ambiente; foi entregue um **patch** em vez do arquivo corrigido | Artefato externo | Aplicar o patch ao arquivo-fonte e devolver para conferência |
+| RES-01 | **Encerrado por Codex.** Referência oficial da ANVISA registrada em fonte primária | Rastreabilidade de fonte | OQ-019 respondida/encerrada |
+| RES-02 | **Encerrado quanto ao artigo e à redação.** Art. 6º da Portaria GM/MS nº 3.523/1998 e limite acima de 5 TR (15.000 kcal/h = 60.000 BTU/h) registrados | Precisão normativa | OQ-012 permanece somente para confirmação jurídica formal |
+| RES-03 | **Encerrado por Codex.** `Overview_Project.md` recebeu o bloco REFERENCE / NON-AUTHORITATIVE e a duplicidade de `AGENTS.md` foi removida | Artefato externo | Patch aplicado |
 | RES-04 | Metas numéricas das métricas de sucesso continuam vazias | Produto | OQ-005 |
 | RES-05 | Autoridades (patrocinador, PO, Jurídico, DPO, responsável técnico) continuam nominalmente vazias | Governança | OQ-002, OQ-003, GAP-004 a GAP-006 |
 | RES-06 | O roadmap continua sem datas | Planejamento | OQ-007 |
@@ -235,7 +246,7 @@ Nenhum risco introduzido foi avaliado como alto. RSK-019 foi registrado como ris
 
 ### J.4 Referências cruzadas quebradas
 
-Nenhuma identificada após a revisão. As referências da v0.1 a "XLS-002 (18 riscos)", "77 capacidades" e "43 MVP" foram corrigidas em DOC-001 §15, §21, DOC-006 §4 e DOC-007 §3.
+Nenhuma identificada após a revisão. As referências da v0.1 a "XLS-002 (18 riscos)" e à consolidação histórica 77/43 foram corrigidas em DOC-001 §15, §21, DOC-006 §4 e DOC-007 §3.
 
 ### J.5 Divergências de contagem
 
@@ -245,11 +256,64 @@ Duas encontradas e corrigidas: as fórmulas de Summary de XLS-001 (restrições 
 
 | Artefato | Dependência | Autoridade |
 | --- | --- | --- |
-| DOC-001 §5.1, §5.2, §5.3 | Aplicabilidade da ABNT NBR 17037; status da Portaria; Regra A × Regra B | Jurídico (STK-007) |
+| DOC-001 §5.1, §5.2, §5.3 | Extensão da aplicabilidade da ABNT NBR 17037; confirmação jurídica formal da Portaria; normas locais, setoriais ou contratuais relacionadas à Regra A × Regra B | Jurídico (STK-007) |
 | DOC-005 (integral) | Confirmação das personas | Cliente-piloto (STK-010) |
 | CAP-033, CAP-035, CAP-038 (conteúdo) | Parâmetros, faixas e periodicidades | Resp. técnico (STK-012) |
 | CAP-054, CAP-058, CAP-095 | Nível probatório e bases legais | Jurídico (STK-007) e DPO (STK-021) |
 | DOC-008 (datas) | Equipe, orçamento e prazo | Patrocinador (STK-001) |
+
+---
+
+## K. Finalização local por Codex — revisão pós-Opus
+
+Esta seção registra a execução local posterior ao trabalho do Opus, sem apagar o histórico das alterações anteriores.
+
+**Problemas encontrados e corrigidos:**
+
+- `PHASE-01-REVIEW.md` v0.1 e `PHASE-01-REVIEW(1).md` v0.2 concorriam no diretório principal.
+- `DIA-002_System_Product_Context_Diagram.png` era revisão visual do DIA-001, não novo artefato conceitual.
+- Planilhas continham sufixo artificial ` 1.xlsx`.
+- `Overview_Project.md` ainda não tinha recebido o patch v0.2.
+- OQ-019 permanecia aberta apesar da fonte oficial ter sido identificada.
+- OQ-012/OQ-021 ainda mantinham perguntas que a fonte oficial já respondia.
+- A edição local/versionamento Git criou uma questão de governança documental M365 × Git.
+
+**Arquivos renomeados ou higienizados:**
+
+- `PHASE-01-REVIEW(1).md` passa a ser o canônico `PHASE-01-REVIEW.md`.
+- `DIA-002_System_Product_Context_Diagram.png` substitui o conteúdo canônico de `DIA-001_System_Product_Context_Diagram.png`.
+- `XLS-001` a `XLS-005` passam a usar nomes canônicos com `- v0.2.xlsx`.
+- `Overview_Project_20-_20PATCH_20v0.2.md` foi removido após aplicação.
+
+**Atualizações regulatórias e de governança:**
+
+- Fonte ANVISA registrada: Guia nº 73/2024, versão 2, de 03/04/2025; Biblioteca Digital da Anvisa, item 17752; vigente a partir de 04/04/2025; instrumento regulatório não normativo, recomendatório e não vinculante.
+- OQ-019 encerrada.
+- OQ-012 reformulada para tratar apenas de confirmação jurídica formal de eventual alteração, revogação, consolidação ou extensão atual da Portaria.
+- OQ-021 reformulada para tratar apenas de normas locais, setoriais, contratuais ou situações de uso restrito.
+- OQ-010 refinada: existência de cliente candidato/piloto confirmada pelo contexto; identidade formal e compromisso operacional seguem pendentes.
+- DEC-011 criada como **Proposta**, sem aprovação automática.
+- `CODEX-REVIEW-01` registrado na aba Change Control.
+
+**Contagens finais após Codex:**
+
+- Capacidades: 79 total; 50 MVP; 19 Pós-MVP; 5 Futuro; 5 A validar.
+- Hipóteses: 12.
+- Restrições: 12.
+- Dependências: 10.
+- Questões registradas: 21; abertas: 20; encerradas: 1.
+- Riscos: 19.
+- Decisões: 11, todas `Proposta`.
+- ADRs indexados: 8, nenhum decidido.
+- Critérios AC-MVP: 11.
+- RTM: 13 linhas semente.
+
+**Itens ainda pendentes:**
+
+- RES-04: metas numéricas das métricas de sucesso (OQ-005).
+- RES-05: autoridades nominalmente não designadas.
+- RES-06: roadmap sem datas (OQ-007).
+- DEC-011 aguarda deliberação formal da Services.NET.
 
 ---
 

@@ -1,3 +1,19 @@
+# STATUS: REFERENCE / NON-AUTHORITATIVE
+
+Este documento registra somente a concepção inicial do projeto.
+
+Em caso de divergência, prevalecem os artefatos formais da Fase 1 do **PMOC Software — Product & Engineering Master Specification** e suas fontes autoritativas declaradas.
+
+Fontes autoritativas vigentes:
+- **Microsoft 365** — documentos executivos, planilhas de governança e visualizações produzidos na Fase 1 (DOC-001 a DOC-008, XLS-001 a XLS-005, DIA-001), até decisão formal em contrário.
+- **Repositório Git** — histórico versionado desta revisão local e futura representação próxima ao código, condicionado à decisão de governança documental registrada como DEC-011 — Proposta.
+
+Este documento **não** é fonte autoritativa para requisito, arquitetura, escopo, regra de negócio ou conformidade.
+
+Registrado em: CON-010 (XLS-001), DOC-001 §30 e DEC-011 (XLS-004).
+
+---
+
 # PMOC Software — Overview do Projeto
 
 Para esse projeto, eu trataria o software como uma plataforma SaaS vertical para gestão de PMOC, e não apenas como um formulário eletrônico ou gerador de relatórios. Isso muda a arquitetura desde o início e evita que o produto fique limitado quando entrarem app mobile, novos clientes, integrações, automações e alterações regulatórias.
@@ -794,7 +810,6 @@ Além disso eu criaria na raiz:
 - README.md
 - AGENTS.md
 - CLAUDE.md
-- AGENTS.md
 
 ### Regras para agentes
 
