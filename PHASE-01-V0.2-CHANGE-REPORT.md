@@ -3,10 +3,10 @@
 **Projeto:** PMOC Software — Product & Engineering Master Specification
 **Organização:** Services.NET
 **Fase:** 1 — Product Charter e Escopo
-**Transição:** v0.1 DRAFT → **v0.2 DRAFT**
+**Transição:** v0.1 DRAFT → **v0.2 — APPROVED**
 **Data:** 22/09/2026
-**Origem de todas as alterações:** **Services.NET Phase 1 Audit — Approved**
-**Status:** Aguardando segunda revisão formal da Services.NET
+**Origem das alterações:** **Services.NET Phase 1 Audit — Approved**; segunda revisão formal da Fase 1 v0.2 pela Services.NET
+**Status:** APPROVED WITH OPEN ACTIONS — aprovação formal da Fase 1 v0.2 pela Services.NET em 22/09/2026
 **Autor:** Opus — análise, arquitetura, documentação, modelagem, revisão e planejamento
 **Finalização local:** Codex — revisão pós-Opus, higienização do repositório e atualização de rastreabilidade
 
@@ -16,7 +16,7 @@
 
 A v0.1 foi considerada estruturalmente adequada e **não foi refeita**. Esta revisão é **corretiva e controlada**: corrige, esclarece e harmoniza os pontos apontados pela auditoria, sem ampliar escopo, sem iniciar a Fase 2, sem produzir implementação e sem decidir ADRs.
 
-Foram executadas **17 correções** agrupadas em três naturezas: regulatórias (4), de consistência (8) e de governança (5). Nenhuma capacidade foi criada, removida ou reclassificada. Nenhum identificador foi reaproveitado para conceito diferente.
+Foram executadas **17 correções** agrupadas em três naturezas: regulatórias (4), de consistência (8) e de governança (5), seguidas de **1 formalização final de aprovação**. Nenhuma capacidade foi criada, removida ou reclassificada. Nenhum identificador foi reaproveitado para conceito diferente.
 
 Os quatro efeitos de maior peso:
 
@@ -26,6 +26,8 @@ Os quatro efeitos de maior peso:
 4. **Prescrições prematuras foram removidas**: `TenantId` como coluna física, assinatura simples como suficiente, checklist obrigatório para toda OS e API obrigatória para toda funcionalidade de interface.
 
 A validação cruzada revelou ainda um **erro de consolidação não apontado pela auditoria**: a v0.1 declarava a consolidação **77/43**; a contagem real do catálogo é **79/50**. O catálogo estava correto; a tabela de consolidação estava errada. Corrigido.
+
+A formalização final registra que a Fase 1 v0.2 foi aprovada pela Services.NET como **APPROVED WITH OPEN ACTIONS**. Esta aprovação não inicia a Fase 2, não altera arquitetura, não cria requisitos, não decide ADRs técnicos e não aprova automaticamente DEC-001 a DEC-010.
 
 ---
 
@@ -57,10 +59,11 @@ A validação cruzada revelou ainda um **erro de consolidação não apontado pe
 | CHG-13 | XLS-001 | Summary | Fórmulas corrigidas (contavam a linha de cabeçalho); verificação estendida a XLS-002 a XLS-005 | Auditoria §15 | Dashboards e automações futuras |
 | CHG-14 | DOC-001, DOC-002, DOC-006, DOC-007 | §9.2, PP-13, CAP-037, AC-MVP-02 | Princípio de preservação do estado de referência do PMOC emitido | Auditoria §16 | OQ-020, RSK-019, COMP-003 |
 | CHG-15 | DIA-001 | — | Ajustes de legibilidade; atualização do rótulo do contexto regulatório; fronteiras conceituais preservadas | Auditoria §17 | Nenhum impacto conceitual |
-| CHG-16 | Todos | Cabeçalhos | Versão 0.2 DRAFT; status "Aguardando segunda revisão formal"; origem das alterações declarada | Auditoria §18 | Controle de versão |
+| CHG-16 | Todos | Cabeçalhos | Versão final v0.2 — APPROVED; status adicional "APPROVED WITH OPEN ACTIONS"; origem das alterações e formalização final declaradas | Auditoria §18 + formalização final | Controle de versão |
 | CHG-17 | DOC-006, DOC-007, DOC-001 | DOC-006 §4, DOC-007 §3, DOC-001 §15 | Consolidação de capacidades corrigida de 77/43 para **79/50** | Validação cruzada (§22 da auditoria) | Coerência entre artefatos |
+| APPROVAL-01 | DOC-001, DOC-004, XLS-001, XLS-003, XLS-004, Overview_Project.md, PHASE-01-REVIEW | Governança final | Formalização da aprovação da Fase 1 v0.2; Sponsor definido; Product Owner institucional definido; tenant-piloto definido; DEC-011 aprovada | Segunda revisão formal da Services.NET | Fase 1 marcada como v0.2 — APPROVED WITH OPEN ACTIONS |
 
-Registro operacional equivalente na aba **Change Control** de XLS-004 (16 itens, incluindo AUDIT-01 e CODEX-REVIEW-01).
+Registro operacional equivalente na aba **Change Control** de XLS-004 (17 itens, incluindo AUDIT-01, CODEX-REVIEW-01 e APPROVAL-01).
 
 ---
 
@@ -98,21 +101,22 @@ Registro operacional equivalente na aba **Change Control** de XLS-004 (16 itens,
 | --- | --- | --- |
 | G1 | **Jurídico × DPO separados** | STK-007 restrito a interpretação legal, vigência, aplicabilidade, contratos e valor probatório; **STK-021** criado para LGPD, bases legais, categorias de dados, retenção, minimização e direitos dos titulares. RACI desdobrado; responsáveis atualizados em ASM-006, OQ-015, RSK-010, DEP-010 |
 | G2 | **ADR-008 sequenciado** | Posicionado como decisão estrutural necessária antes da implementação das partes dependentes (CAP-030 a CAP-035, CAP-037, CAP-038); incorporado a DEP-009 e ao critério de entrada de W1. **Conteúdo não antecipado** |
-| G3 | **Decision Log preservado** | DEC-001 a DEC-010 permanecem `Proposta`. A aceitação da auditoria foi registrada como **AUDIT-01** na nova aba Change Control, sem conversão automática de status. Regra incorporada a DOC-001 §31, item 6 |
-| G4 | **Overview_Project.md** | Marcado como REFERENCE / NON-AUTHORITATIVE via patch; duplicidade de `AGENTS.md` corrigida; registrado em CON-010 e DOC-001 §30 |
-| G5 | **Controle de versão** | Todos os artefatos alterados passam a v0.2 DRAFT com status "Aguardando segunda revisão formal da Services.NET". A Fase 1 **não** foi marcada como APPROVED |
+| G3 | **Decision Log preservado** | DEC-001 a DEC-010 permanecem `Proposta`. A aceitação da auditoria foi registrada como **AUDIT-01** na aba Change Control sem conversão automática. Na formalização final, somente **DEC-011** foi convertida para `Aprovada` |
+| G4 | **Overview_Project.md** | Marcado como REFERENCE / NON-AUTHORITATIVE via patch; duplicidade de `AGENTS.md` corrigida; registrado em CON-010 e DOC-001 §30. Após DEC-011, o cabeçalho foi atualizado para refletir Git como baseline técnica autoritativa |
+| G5 | **Controle de versão** | Todos os artefatos alterados passam a v0.2 — APPROVED, com status adicional **APPROVED WITH OPEN ACTIONS**. A Fase 2 não foi iniciada |
 
 ---
 
-## F. Questões novas da v0.2 — estado após finalização local
+## F. Questões novas da v0.2 — estado após formalização final
 
 | ID | Questão (resumo) | Autoridade | Prioridade | Origem |
 | --- | --- | --- | --- | --- |
 | **OQ-019** | Referência oficial exata da orientação da ANVISA que indica a ABNT NBR 17037 como referência de qualidade do ar interior | Respondida por Codex | Encerrada | Guia nº 73/2024, versão 2, de 03/04/2025; Biblioteca Digital da Anvisa, item 17752 |
 | **OQ-020** | Mecanismo que preservará o estado de referência de um PMOC emitido | Architect (STK-003) | Alta | Auditoria §16 |
 | **OQ-021** | Exigências estaduais, municipais, setoriais, contratuais ou situações de uso restrito que possam afetar Regra A / Regra B | Jurídico (STK-007) + Resp. técnico (STK-012) | Alta | Reformulada por Codex; no contexto federal, 5 TR / 60.000 BTU/h fundamenta a Regra B, não uma condição geral da Regra A |
+| **OQ-022** | Interlocutores específicos, disponibilidade, compromisso operacional e agenda da Clima Zero Climatização | Product Owner institucional (STK-002) + Clima Zero Climatização (STK-010) | Alta | Criada para separar pendências operacionais da identidade/existência do tenant-piloto, encerrada em OQ-010 |
 
-Total histórico: 18 → **21 registradas**. Estado após Codex: **20 abertas**, **1 respondida/encerrada**.
+Total histórico: 18 → **22 registradas**. Estado após formalização final: **18 abertas**, **4 respondidas/encerradas**.
 
 ---
 
@@ -140,8 +144,8 @@ Total histórico: 18 → **21 registradas**. Estado após Codex: **20 abertas**,
 
 ### OQ-010
 - **Antes:** cliente-piloto descrito genericamente como não confirmado.
-- **Agora:** a existência de cliente candidato/piloto é tratada como confirmada pelo contexto de origem; permanecem pendentes a identidade formal do tenant-piloto, interlocutores, disponibilidade para levantamento, compromisso de operar o MVP e agenda da Fase 2.
-- **Razão:** evitar transformar em desconhecido o que o contexto do projeto já confirma, sem inventar nome, CNPJ ou pessoas.
+- **Agora:** a existência e identidade formal do tenant-piloto foram respondidas/encerradas: **Clima Zero Climatização**.
+- **Razão:** a Services.NET confirmou a empresa parceira que apresentou a necessidade da plataforma. Interlocutores específicos, disponibilidade, compromisso operacional e agenda foram separados em **OQ-022**, sem reabrir OQ-010.
 
 ### OQ-021
 - **Antes:** perguntava se o limite de 5 TR / 60.000 BTU/h integrava ou não a Regra A.
@@ -180,7 +184,7 @@ Para demonstrar ausência de scope creep:
 
 1. **O catálogo de capacidades.** Nenhuma capacidade criada, removida ou reclassificada. Apenas a tabela de consolidação foi corrigida.
 2. **O escopo do MVP.** As mesmas 50 capacidades da v0.1 permanecem; o que mudou foi a explicitação da separação entre capacidade estrutural e conteúdo.
-3. **As decisões DEC-001 a DEC-010.** Permanecem `Proposta`. Nenhuma foi aprovada, rejeitada ou substituída.
+3. **As decisões DEC-001 a DEC-010.** Permanecem `Proposta`. Nenhuma foi aprovada, rejeitada ou substituída. **DEC-011** foi a única decisão explicitamente aprovada nesta formalização.
 4. **Os ADRs.** Nenhum foi decidido. Do ADR-008 alterou-se apenas a posição na sequência de dependências, não o conteúdo.
 5. **A arquitetura do DIA-001.** As fronteiras conceituais são idênticas; "Contexto Regulatório" permanece como fonte de requisitos e não como sistema externo.
 6. **A visão, a missão e a proposta de valor.**
@@ -206,17 +210,17 @@ Verificação entre DOC-001 a DOC-008, XLS-001 a XLS-005, DIA-001, Overview_Proj
 | Hipóteses | 12 | XLS-001 Assumptions + Summary |
 | Restrições | 12 | XLS-001 Constraints + Summary; DOC-001 §19 |
 | Dependências | 10 | XLS-001 Dependencies + Summary |
-| Questões registradas | 21 (20 abertas; 1 encerrada) | XLS-003 + Summary |
+| Questões registradas | 22 (18 abertas; 4 respondidas/encerradas) | XLS-003 + Summary |
 | Riscos | 19 | XLS-002 + Summary |
-| Decisões | 11, todas `Proposta` | XLS-004 + Summary |
+| Decisões | 11 (10 `Proposta`; 1 `Aprovada`) | XLS-004 + Summary |
 | ADRs indexados | 8, nenhum decidido | XLS-004 ADR Register; DOC-008 §5 |
 | Critérios de aceite do MVP | 11 | DOC-007 §6 |
 | Linhas semente da RTM | 13 | XLS-005 + Summary |
-| Itens de controle de mudança | 16 (AUDIT-01 + CHG-01 a CHG-14 + CODEX-REVIEW-01) | XLS-004 Change Control |
+| Itens de controle de mudança | 17 (AUDIT-01 + CHG-01 a CHG-14 + CODEX-REVIEW-01 + APPROVAL-01) | XLS-004 Change Control |
 
 **Estados:** nenhuma capacidade aparece com mais de uma classificação. A única situação de dupla natureza — CAP-033 — foi resolvida por regra formal (DOC-003 §2, parágrafo final): a classificação recai sobre a capacidade, e a restrição sobre o conteúdo é declarada no próprio item.
 
-**IDs:** nenhum duplicado; nenhum reaproveitado para conceito diferente. STK-021, DEP-010, RSK-019, OQ-019 a OQ-021, DEC-011, COMP-002 a COMP-004, FR-002, NFR-002, AC-MVP-11, AC-SCOPE-05, OOS-015, GAP-006 e PP-13 são identificadores novos.
+**IDs:** nenhum duplicado; nenhum reaproveitado para conceito diferente. STK-021, DEP-010, RSK-019, OQ-019 a OQ-022, DEC-011, COMP-002 a COMP-004, FR-002, NFR-002, AC-MVP-11, AC-SCOPE-05, OOS-015, GAP-006 e PP-13 são identificadores novos.
 
 **Referências:** todas as referências a §, CAP, OQ, ASM, RSK, DEC, ADR, STK, DEP e CON foram verificadas contra os registros existentes. Nenhuma referência pendente foi localizada.
 
@@ -230,7 +234,7 @@ Verificação entre DOC-001 a DOC-008, XLS-001 a XLS-005, DIA-001, Overview_Proj
 | RES-02 | **Encerrado quanto ao artigo e à redação.** Art. 6º da Portaria GM/MS nº 3.523/1998 e limite acima de 5 TR (15.000 kcal/h = 60.000 BTU/h) registrados | Precisão normativa | OQ-012 permanece somente para confirmação jurídica formal |
 | RES-03 | **Encerrado por Codex.** `Overview_Project.md` recebeu o bloco REFERENCE / NON-AUTHORITATIVE e a duplicidade de `AGENTS.md` foi removida | Artefato externo | Patch aplicado |
 | RES-04 | Metas numéricas das métricas de sucesso continuam vazias | Produto | OQ-005 |
-| RES-05 | Autoridades (patrocinador, PO, Jurídico, DPO, responsável técnico) continuam nominalmente vazias | Governança | OQ-002, OQ-003, GAP-004 a GAP-006 |
+| RES-05 | Autoridades jurídica, DPO e responsável técnico operacional continuam nominalmente vazias | Governança | GAP-004 a GAP-006 |
 | RES-06 | O roadmap continua sem datas | Planejamento | OQ-007 |
 
 ### J.3 Riscos introduzidos por esta revisão
@@ -277,6 +281,7 @@ Esta seção registra a execução local posterior ao trabalho do Opus, sem apag
 - OQ-019 permanecia aberta apesar da fonte oficial ter sido identificada.
 - OQ-012/OQ-021 ainda mantinham perguntas que a fonte oficial já respondia.
 - A edição local/versionamento Git criou uma questão de governança documental M365 × Git.
+- A segunda revisão formal da Services.NET aprovou a Fase 1 v0.2 com open actions e aprovou explicitamente DEC-011.
 
 **Arquivos renomeados ou higienizados:**
 
@@ -291,9 +296,13 @@ Esta seção registra a execução local posterior ao trabalho do Opus, sem apag
 - OQ-019 encerrada.
 - OQ-012 reformulada para tratar apenas de confirmação jurídica formal de eventual alteração, revogação, consolidação ou extensão atual da Portaria.
 - OQ-021 reformulada para tratar apenas de normas locais, setoriais, contratuais ou situações de uso restrito.
-- OQ-010 refinada: existência de cliente candidato/piloto confirmada pelo contexto; identidade formal e compromisso operacional seguem pendentes.
-- DEC-011 criada como **Proposta**, sem aprovação automática.
+- OQ-010 encerrada quanto à existência e identidade formal do tenant-piloto: **Clima Zero Climatização**.
+- OQ-022 criada para interlocutores específicos, disponibilidade, compromisso operacional e agenda da Clima Zero Climatização.
+- OQ-002 encerrada: patrocinador definido como **Alan Maciel Lima**, CEO e especialista da Services.NET.
+- OQ-003 encerrada: Product Owner institucional definido como **Services.NET**.
+- DEC-011 aprovada: Microsoft 365 como ambiente de autoria/colaboração/apresentação/visualização executiva; Git como baseline técnica autoritativa dos artefatos de engenharia formalmente publicados/aprovados.
 - `CODEX-REVIEW-01` registrado na aba Change Control.
+- `APPROVAL-01` registrado na aba Change Control.
 
 **Contagens finais após Codex:**
 
@@ -301,9 +310,9 @@ Esta seção registra a execução local posterior ao trabalho do Opus, sem apag
 - Hipóteses: 12.
 - Restrições: 12.
 - Dependências: 10.
-- Questões registradas: 21; abertas: 20; encerradas: 1.
+- Questões registradas: 22; abertas: 18; respondidas/encerradas: 4.
 - Riscos: 19.
-- Decisões: 11, todas `Proposta`.
+- Decisões: 11; 10 `Proposta`; 1 `Aprovada` (DEC-011).
 - ADRs indexados: 8, nenhum decidido.
 - Critérios AC-MVP: 11.
 - RTM: 13 linhas semente.
@@ -311,10 +320,10 @@ Esta seção registra a execução local posterior ao trabalho do Opus, sem apag
 **Itens ainda pendentes:**
 
 - RES-04: metas numéricas das métricas de sucesso (OQ-005).
-- RES-05: autoridades nominalmente não designadas.
+- RES-05: autoridades jurídica, DPO e responsável técnico operacional ainda não designadas.
 - RES-06: roadmap sem datas (OQ-007).
-- DEC-011 aguarda deliberação formal da Services.NET.
+- OQ-022: interlocutores, disponibilidade, compromisso operacional e agenda da Clima Zero Climatização.
 
 ---
 
-**A Fase 2 não foi iniciada e permanece aguardando nova revisão formal da Services.NET.**
+**A Fase 1 v0.2 está APPROVED WITH OPEN ACTIONS. A Fase 2 não foi iniciada nesta execução.**

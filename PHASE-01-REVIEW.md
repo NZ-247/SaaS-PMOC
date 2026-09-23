@@ -3,11 +3,11 @@
 **Projeto:** PMOC Software — Plataforma de Gestão de Manutenção, Ativos e Conformidade para Sistemas de Climatização
 **Organização:** Services.NET
 **Fase:** 1 — Product Charter e Escopo
-**Versão:** **0.2 DRAFT** · Versão anterior: 0.1 DRAFT (baseline histórica, preservada)
+**Versão:** **v0.2 — APPROVED** · Versão anterior: 0.1 DRAFT (baseline histórica, preservada)
 **Data:** 22/09/2026
-**Origem das alterações:** **Services.NET Phase 1 Audit — Approved**; finalização local por Codex
+**Origem das alterações:** **Services.NET Phase 1 Audit — Approved**; finalização local por Codex; segunda revisão formal da Fase 1 v0.2 pela Services.NET
 **Autor:** Opus — análise, arquitetura, documentação, modelagem, revisão e planejamento
-**Status:** **Aguardando segunda revisão formal da Services.NET. A Fase 1 não está APPROVED. A Fase 2 não foi iniciada.**
+**Status:** **Fase 1 APPROVED pela Services.NET em 22/09/2026. Status adicional: APPROVED WITH OPEN ACTIONS. A Fase 2 não foi iniciada.**
 
 > Este documento substitui integralmente a versão v0.1. Afirmações desatualizadas da v0.1 não foram reaproveitadas. O detalhamento das alterações está em `PHASE-01-V0.2-CHANGE-REPORT.md`.
 
@@ -19,9 +19,11 @@ A Fase 1 entrega a visão formal do produto antes de qualquer levantamento detal
 
 O produto é concebido, conforme o Master Specification §5, como **plataforma de gestão de manutenção, ativos, operações de campo, conformidade, evidências e inteligência operacional**, tendo o PMOC como **primeiro domínio regulatório atendido** — não como sistema de preenchimento de PMOC.
 
-Números verificados nesta versão: **79 capacidades** catalogadas (50 MVP, 19 Pós-MVP, 5 Futuro, 5 A validar), **12 hipóteses**, **12 restrições**, **10 dependências**, **21 questões registradas** (**20 abertas** e **1 encerrada**), **19 riscos**, **11 decisões propostas**, **8 ADRs indexados e nenhum decidido**, **11 critérios de aceite do MVP** e **13 linhas semente na RTM**.
+Números verificados nesta versão: **79 capacidades** catalogadas (50 MVP, 19 Pós-MVP, 5 Futuro, 5 A validar), **12 hipóteses**, **12 restrições**, **10 dependências**, **22 questões registradas** (**18 abertas** e **4 respondidas/encerradas**), **19 riscos**, **11 decisões registradas** (**10 propostas** e **1 aprovada**), **8 ADRs indexados e nenhum decidido**, **11 critérios de aceite do MVP** e **13 linhas semente na RTM**.
 
 Nenhum código foi produzido. Nenhuma tecnologia foi considerada definitiva. Nenhum ADR foi decidido. Nenhum parâmetro regulatório foi carregado. Nenhum requisito, norma, obrigação legal, periodicidade, perfil profissional obrigatório, norma técnica ou fluxo operacional do cliente foi inventado.
+
+A aprovação formal da Fase 1 v0.2 aprova o pacote documental como base para avanço futuro. Ela **não** significa validação jurídica final, aprovação de ADRs, escolha definitiva da stack, encerramento de todas as OQs ou aprovação automática de todas as DEC.
 
 ---
 
@@ -29,24 +31,24 @@ Nenhum código foi produzido. Nenhuma tecnologia foi considerada definitiva. Nen
 
 | ID | Artefato | Formato | Versão | Recomendação |
 | --- | --- | --- | --- | --- |
-| DOC-001 | PMOC Software — Product Charter | Word | 0.2 DRAFT | Aprovar com ressalvas |
-| DOC-002 | Product Vision and Product Principles | Word | 0.2 DRAFT | Aprovar |
-| DOC-003 | Project Scope | Word | 0.2 DRAFT | Aprovar |
-| DOC-004 | Stakeholder Map | Word | 0.2 DRAFT | Aprovar com ressalvas |
-| DOC-005 | Personas — versão inicial | Word | 0.2 DRAFT | Revisar (hipótese não validada) |
-| DOC-006 | Product Capabilities Map | Word | 0.2 DRAFT | Aprovar |
-| DOC-007 | MVP Definition | Word | 0.2 DRAFT | Aprovar com ressalvas |
-| DOC-008 | Product Roadmap — visão macro | Word | 0.2 DRAFT | Aprovar com ressalvas |
-| XLS-001 | Assumptions, Constraints and Dependencies Register | Excel | 0.2 DRAFT | Aprovar |
-| XLS-002 | Risk Register | Excel | 0.2 DRAFT | Aprovar |
-| XLS-003 | Open Questions Register | Excel | 0.2 DRAFT | Aprovar |
-| XLS-004 | Decision Log + ADR Register + Change Control | Excel | 0.2 DRAFT | Aprovar como propostas |
-| XLS-005 | Requirements Traceability Matrix — estrutura inicial | Excel | 0.2 DRAFT | Aprovar a estrutura |
-| DIA-001 | System/Product Context Diagram — nível conceitual | PNG | 0.2 DRAFT | Aprovar |
-| — | PHASE-01-V0.2-CHANGE-REPORT.md | Markdown | 0.2 | Aprovar |
+| DOC-001 | PMOC Software — Product Charter | Word | v0.2 — APPROVED | Aprovado com ações abertas |
+| DOC-002 | Product Vision and Product Principles | Word | v0.2 — APPROVED | Aprovado |
+| DOC-003 | Project Scope | Word | v0.2 — APPROVED | Aprovado |
+| DOC-004 | Stakeholder Map | Word | v0.2 — APPROVED | Aprovado com ações abertas |
+| DOC-005 | Personas — versão inicial | Word | v0.2 — APPROVED | Aprovado como hipótese a validar |
+| DOC-006 | Product Capabilities Map | Word | v0.2 — APPROVED | Aprovado |
+| DOC-007 | MVP Definition | Word | v0.2 — APPROVED | Aprovado com ações abertas |
+| DOC-008 | Product Roadmap — visão macro | Word | v0.2 — APPROVED | Aprovado com ações abertas |
+| XLS-001 | Assumptions, Constraints and Dependencies Register | Excel | v0.2 — APPROVED | Aprovado |
+| XLS-002 | Risk Register | Excel | v0.2 — APPROVED | Aprovado |
+| XLS-003 | Open Questions Register | Excel | v0.2 — APPROVED | Aprovado |
+| XLS-004 | Decision Log + ADR Register + Change Control | Excel | v0.2 — APPROVED | Aprovado com DEC-011 aprovada |
+| XLS-005 | Requirements Traceability Matrix — estrutura inicial | Excel | v0.2 — APPROVED | Aprovado como estrutura |
+| DIA-001 | System/Product Context Diagram — nível conceitual | PNG | v0.2 — APPROVED | Aprovado |
+| — | PHASE-01-V0.2-CHANGE-REPORT.md | Markdown | v0.2 — APPROVED | Aprovado |
 | — | Overview_Project.md | Markdown | 0.2 | Manter como referência não autoritativa |
 
-Fonte autoritativa vigente nesta fase: Microsoft 365, até decisão formal em contrário. A edição local e o versionamento Git desta revisão introduzem uma questão de governança registrada como **DEC-011 — Proposta**. `Overview_Project.md` é **REFERENCE / NON-AUTHORITATIVE**.
+Governança documental aprovada em **DEC-011**: Microsoft 365 é o ambiente de autoria, colaboração, apresentação, visualização executiva, Word, Excel, Power BI e interação com agentes integrados ao ambiente corporativo. Git é a baseline técnica autoritativa e versionada dos artefatos de engenharia formalmente publicados/aprovados. Em caso de divergência entre uma cópia M365 e uma versão formalmente publicada/aprovada no Git, prevalece a baseline aprovada no Git. `Overview_Project.md` é **REFERENCE / NON-AUTHORITATIVE**.
 
 ---
 
@@ -73,50 +75,49 @@ Fonte autoritativa vigente nesta fase: Microsoft 365, até decisão formal em co
 
 ---
 
-## 4. Decisões propostas (permanecem `Proposta` — XLS-004)
+## 4. Decisões registradas (XLS-004)
 
-A aceitação da auditoria **não** converteu decisões em aprovadas. As onze decisões seguem com status `Proposta`; a aceitação está registrada como **AUDIT-01** na aba Change Control e a finalização local está registrada como **CODEX-REVIEW-01**.
+A aprovação da Fase 1 **não** converteu automaticamente todas as decisões em aprovadas. **DEC-001 a DEC-010 permanecem no estado `Proposta`**. Somente **DEC-011** foi explicitamente aprovada pela Services.NET nesta formalização final.
 
-| ID | Decisão proposta |
+| ID | Situação |
 | --- | --- |
-| DEC-001 | Plataforma de manutenção/ativos/campo/conformidade; PMOC como primeiro domínio regulatório |
-| DEC-002 | Nome comercial não definido nesta fase |
-| DEC-003 | Modular Monolith + API First como hipótese, a confirmar por ADR |
-| DEC-004 | Multi-tenancy como regra semântica e de segurança; modelo físico em ADR-001 |
-| DEC-005 | Compliance as Data, distinguindo capacidade estrutural de conteúdo regulatório |
-| DEC-006 | MVP Web First; mobile e offline Pós-MVP |
-| DEC-007 | Auditoria de negócio na primeira versão, separada de log técnico |
-| DEC-008 | Roadmap por ondas de valor, sem datas |
-| DEC-009 | Normas técnicas referenciadas, nunca reproduzidas; norma técnica não recebe status de lei |
-| DEC-010 | Nenhum código antes da aprovação documental e dos ADRs estruturantes |
-| DEC-011 | **Proposta:** definir governança documental Microsoft 365 × Git após adoção de edição local/versionamento Git |
+| DEC-001 | **Proposta:** plataforma de manutenção/ativos/campo/conformidade; PMOC como primeiro domínio regulatório |
+| DEC-002 | **Proposta:** nome comercial não definido nesta fase |
+| DEC-003 | **Proposta:** Modular Monolith + API First como hipótese, a confirmar por ADR |
+| DEC-004 | **Proposta:** multi-tenancy como regra semântica e de segurança; modelo físico em ADR-001 |
+| DEC-005 | **Proposta:** Compliance as Data, distinguindo capacidade estrutural de conteúdo regulatório |
+| DEC-006 | **Proposta:** MVP Web First; mobile e offline Pós-MVP |
+| DEC-007 | **Proposta:** auditoria de negócio na primeira versão, separada de log técnico |
+| DEC-008 | **Proposta:** roadmap por ondas de valor, sem datas |
+| DEC-009 | **Proposta:** normas técnicas referenciadas, nunca reproduzidas; norma técnica não recebe status de lei |
+| DEC-010 | **Proposta:** nenhum código antes da aprovação documental e dos ADRs estruturantes |
+| DEC-011 | **Aprovada:** Microsoft 365 como ambiente de autoria/colaboração/apresentação/visualização executiva; Git como baseline técnica autoritativa e versionada dos artefatos de engenharia formalmente publicados/aprovados |
 
 ---
 
 ## 5. Decisões ainda necessárias
 
-**Antes de aprovar a Fase 1:**
-1. Nomeação de patrocinador (OQ-002) e Product Owner (OQ-003).
-2. Identificação da autoridade jurídica (GAP-005) e do DPO/Encarregado (GAP-006).
-3. Confirmação formal do cliente-piloto (OQ-010).
-4. Definição de equipe, orçamento e prazo (OQ-007).
-5. Confirmação do modelo de operação e SLA (OQ-011).
-6. Decisão formal sobre governança documental Microsoft 365 × Git (DEC-011).
+**Ações abertas após aprovação da Fase 1:**
+1. Identificação da autoridade jurídica (GAP-005), do DPO/Encarregado (GAP-006) e do responsável técnico operacional (GAP-004).
+2. Definição de equipe, orçamento e prazo (OQ-007).
+3. Confirmação do modelo de operação e SLA (OQ-011).
+4. Formalização de interlocutores, disponibilidade, compromisso operacional e agenda com a Clima Zero Climatização (OQ-022 / DEP-004).
+5. Solicitações formais de parecer jurídico, do DPO e de responsável técnico.
 
 **Antes de iniciar a implementação (W1):**
-7. ADR-001 — isolamento multi-tenant.
-8. ADR-002 — estratégia de identificadores.
-9. ADR-003 e ADR-004 — stacks de back-end e front-end.
-10. ADR-005 — armazenamento de evidências.
-11. ADR-006 — modelo de auditoria de negócio.
-12. **ADR-008 — modelo de dados de Compliance as Data** (pré-requisito de CAP-030 a CAP-035, CAP-037 e CAP-038).
-13. Mecanismo de preservação do estado de referência do PMOC (OQ-020), nas Fases 3 e 6.
+1. ADR-001 — isolamento multi-tenant.
+2. ADR-002 — estratégia de identificadores.
+3. ADR-003 e ADR-004 — stacks de back-end e front-end.
+4. ADR-005 — armazenamento de evidências.
+5. ADR-006 — modelo de auditoria de negócio.
+6. **ADR-008 — modelo de dados de Compliance as Data** (pré-requisito de CAP-030 a CAP-035, CAP-037 e CAP-038).
+7. Mecanismo de preservação do estado de referência do PMOC (OQ-020), nas Fases 3 e 6.
 
 **Dependentes de terceiros:**
-14. Parecer jurídico sobre a extensão da aplicabilidade da ABNT NBR 17037, sobre a Portaria GM/MS nº 3.523/1998, sobre exigências locais/setoriais/contratuais da Regra A / Regra B e sobre o nível probatório exigido (DEP-001).
-15. Parecer do DPO sobre bases legais, retenção e direitos dos titulares (DEP-010).
-16. Parecer de responsável técnico sobre periodicidades e parâmetros (DEP-002).
-17. Aquisição legítima da ABNT NBR 17037 e demais normas aplicáveis (DEP-003).
+1. Parecer jurídico sobre a extensão da aplicabilidade da ABNT NBR 17037, sobre a Portaria GM/MS nº 3.523/1998, sobre exigências locais/setoriais/contratuais da Regra A / Regra B e sobre o nível probatório exigido (DEP-001).
+2. Parecer do DPO sobre bases legais, retenção e direitos dos titulares (DEP-010).
+3. Parecer de responsável técnico sobre periodicidades e parâmetros (DEP-002).
+4. Aquisição legítima da ABNT NBR 17037 e demais normas aplicáveis (DEP-003).
 
 ---
 
@@ -126,7 +127,7 @@ Nenhuma hipótese é requisito confirmado. As de maior impacto:
 
 | ID | Hipótese | Impacto se falsa |
 | --- | --- | --- |
-| ASM-001 | Existe cliente-piloto disponível para validar requisitos | Fase 2 produziria requisitos presumidos |
+| ASM-001 | Clima Zero Climatização é o tenant-piloto; disponibilidade, interlocutores e agenda ainda serão formalizados | Fase 2 produziria requisitos presumidos se a disponibilidade operacional não for confirmada |
 | ASM-004 | Há conectividade suficiente para uso Web no campo | PWA/offline precisaria ser antecipado para o MVP |
 | ASM-008 | A prestadora possui responsável técnico habilitado | Modelo de responsabilidade do produto muda |
 | ASM-010 | Equipamento é a menor unidade de inventário necessária ao MVP | Modelo de domínio e checklists mudam |
@@ -135,19 +136,22 @@ Nenhuma hipótese é requisito confirmado. As de maior impacto:
 
 ---
 
-## 7. Questões registradas (21 — XLS-003)
+## 7. Questões registradas (22 — XLS-003)
 
-**20 abertas, 1 encerrada (OQ-019) e 13 abertas de prioridade alta.** Bloqueantes para o avanço:
+**18 abertas, 4 respondidas/encerradas (OQ-002, OQ-003, OQ-010 e OQ-019) e 11 abertas de prioridade alta.** Ações abertas principais:
 
-- **OQ-002 / OQ-003** — patrocinador e Product Owner não designados.
-- **OQ-010** — cliente candidato/piloto existe no contexto do projeto; identidade formal do tenant-piloto, interlocutores, disponibilidade, compromisso operacional e agenda da Fase 2 permanecem pendentes.
 - **OQ-004** — extensão da aplicabilidade da ABNT NBR 17037 (reformulada).
+- **OQ-005** — metas quantitativas.
+- **OQ-006** — nível probatório/assinaturas e manifestação de vontade.
+- **OQ-007** — equipe, orçamento e prazo.
+- **OQ-009** — validação das personas com o tenant-piloto.
+- **OQ-011** — modelo operacional/SLA.
 - **OQ-012** — confirmação formal quanto à Portaria GM/MS nº 3.523/1998 (reformulada).
 - **OQ-021** — exigências estaduais, municipais, setoriais, contratuais ou situações de uso restrito que possam afetar Regra A / Regra B.
 - **OQ-020** — mecanismo de preservação do estado de referência do PMOC (**nova**).
-- **OQ-006** — nível de identificação e manifestação de vontade (reformulada).
 - **OQ-015** — bases legais da LGPD, agora sob o DPO (responsável corrigido).
 - **OQ-018** — granularidade mínima de ativo exigida pelo piloto.
+- **OQ-022** — interlocutores específicos, disponibilidade, compromisso operacional e agenda da Clima Zero Climatização.
 
 ---
 
@@ -156,7 +160,7 @@ Nenhuma hipótese é requisito confirmado. As de maior impacto:
 | ID | Risco | Score |
 | --- | --- | --- |
 | RSK-003 | Scope creep no MVP | 16 |
-| RSK-004 | Ausência de cliente-piloto engajado | 15 |
+| RSK-004 | Interlocutores, disponibilidade e agenda do tenant-piloto ainda não formalizados | 15 |
 | RSK-006 | Definição tardia do modelo de multi-tenancy | 15 |
 | RSK-017 | Backup existente com restore nunca testado | 15 |
 | **RSK-019** | **PMOC emitido perder fidelidade ao estado que o originou (novo)** | **16** |
@@ -183,28 +187,31 @@ Tratamento adotado: a ABNT NBR 17037 é registrada como **norma técnica**, **n�
 
 **INC-005 — Exigências estaduais e municipais.** Não levantadas. Podem impor requisitos adicionais ao piloto (OQ-013).
 
-**INC-006 — Governança documental.** Fonte autoritativa vigente nesta fase: Microsoft 365, até decisão formal em contrário. A edição local/versionamento Git desta revisão foi registrada em **DEC-011 — Proposta** para que a Services.NET decida entre M365 autoritativo, Git autoritativo para artefatos de engenharia, ou divisão explícita por tipo de artefato. `Overview_Project.md` foi marcado como não autoritativo (CON-010).
+**INC-006 — Governança documental.** **DEC-011 aprovada.** Microsoft 365 será o ambiente de autoria, colaboração, apresentação, visualização executiva, Word, Excel, Power BI e interação com agentes integrados ao ambiente corporativo. Git será a baseline técnica autoritativa e versionada dos artefatos de engenharia formalmente publicados/aprovados. Fluxos operacionais: M365 → autoria/alteração → revisão → publicação → Git; ou Git → alteração técnica → revisão/aprovação → baseline → sincronização da representação M365 quando aplicável. Em caso de divergência entre cópia M365 e baseline aprovada no Git, prevalece a baseline aprovada no Git. `Overview_Project.md` permanece não autoritativo (CON-010).
 
 **INC-007 — Personas não validadas.** DOC-005 permanece integralmente hipótese (ASM-009, OQ-009).
 
-**INC-008 — Separação de autoridades (novo).** Jurídico e DPO são autoridades distintas. Nenhuma das duas está nominalmente identificada (GAP-005, GAP-006).
+**INC-008 — Separação de autoridades (novo).** Patrocinador e Product Owner institucional foram definidos. Jurídico e DPO continuam autoridades distintas e ainda não nominalmente identificadas (GAP-005, GAP-006).
 
 ---
 
-## 10. Informações que precisam ser obtidas com o cliente
+## 10. Informações que precisam ser obtidas com o tenant-piloto
 
-1. Processo operacional real: do fechamento do contrato à entrega do relatório ao cliente da prestadora.
-2. Volumetria: clientes da prestadora, unidades, ambientes, sistemas HVAC, equipamentos, OS/mês, técnicos.
-3. Estrutura atual de dados e qualidade do inventário.
-4. Papéis reais, permissões praticadas e regras de segregação interna.
-5. Modelo de planos de manutenção em uso, periodicidades praticadas e **origem** dessas periodicidades.
-6. Checklists e formulários utilizados em campo, e **quais são obrigatórios por tipo de OS**.
-7. Medições coletadas, instrumentos, unidades e critérios de aceitação praticados.
-8. Tratamento atual de não conformidades e ações corretivas.
-9. Formato, conteúdo e destinatários dos relatórios e do PMOC entregues hoje.
-10. Condições reais de campo: conectividade, dispositivos, restrições de acesso e de segurança do trabalho.
-11. Exigências contratuais e de fiscalização já enfrentadas, **incluindo o nível probatório exigido de cada documento**.
-12. Expectativas explícitas quanto ao MVP e critérios do cliente para considerá-lo bem-sucedido.
+Tenant-piloto definido: **Clima Zero Climatização**.
+
+1. Interlocutores específicos, disponibilidade, compromisso operacional e agenda da Fase 2.
+2. Processo operacional real: do fechamento do contrato à entrega do relatório ao cliente da prestadora.
+3. Volumetria: clientes da prestadora, unidades, ambientes, sistemas HVAC, equipamentos, OS/mês, técnicos.
+4. Estrutura atual de dados e qualidade do inventário.
+5. Papéis reais, permissões praticadas e regras de segregação interna.
+6. Modelo de planos de manutenção em uso, periodicidades praticadas e **origem** dessas periodicidades.
+7. Checklists e formulários utilizados em campo, e **quais são obrigatórios por tipo de OS**.
+8. Medições coletadas, instrumentos, unidades e critérios de aceitação praticados.
+9. Tratamento atual de não conformidades e ações corretivas.
+10. Formato, conteúdo e destinatários dos relatórios e do PMOC entregues hoje.
+11. Condições reais de campo: conectividade, dispositivos, restrições de acesso e de segurança do trabalho.
+12. Exigências contratuais e de fiscalização já enfrentadas, **incluindo o nível probatório exigido de cada documento**.
+13. Expectativas explícitas quanto ao MVP e critérios do cliente para considerá-lo bem-sucedido.
 
 ---
 
@@ -222,6 +229,7 @@ Tratamento adotado: a ABNT NBR 17037 é registrada como **norma técnica**, **n�
 - Modelo de isolamento multi-tenant e demais escolhas tecnológicas.
 - Nível exigido de acessibilidade.
 - Modelo comercial e de contrato do piloto.
+- Interlocutores específicos, disponibilidade, compromisso operacional e agenda da Clima Zero Climatização.
 
 ---
 
@@ -229,21 +237,21 @@ Tratamento adotado: a ABNT NBR 17037 é registrada como **norma técnica**, **n�
 
 | Artefato | Recomendação | Condição |
 | --- | --- | --- |
-| DOC-001 | **Aprovar com ressalvas** | §5.1, §5.2 e §5.3 permanecem sob revisão até parecer jurídico; preencher patrocinador e Product Owner |
-| DOC-002 | **Aprovar** | PP-13 depende de detalhamento nas Fases 3 e 6 |
-| DOC-003 | **Aprovar** | Reavaliar itens "A validar" após a Fase 2 |
-| DOC-004 | **Aprovar com ressalvas** | Fechar GAP-001 a GAP-006 |
-| DOC-005 | **Revisar** | Validar com o piloto antes de usar em decisões de UX |
-| DOC-006 | **Aprovar** | Consolidação corrigida; reclassificação apenas por gestão de mudança |
-| DOC-007 | **Aprovar com ressalvas** | Reconfirmar após o levantamento da Fase 2; AC-MVP-11 depende de registro formal de validação |
-| DOC-008 | **Aprovar com ressalvas** | Incluir datas somente após OQ-007 |
-| XLS-001 | **Aprovar** | Manutenção contínua |
-| XLS-002 | **Aprovar** | Reavaliar a cada fase |
-| XLS-003 | **Aprovar** | Atribuir prazos aos responsáveis |
-| XLS-004 | **Aprovar as decisões como propostas** | Conversão de status exige instrução explícita |
-| XLS-005 | **Aprovar a estrutura** | Preenchimento a partir da Fase 2 |
-| DIA-001 | **Aprovar** | Atualizar quando o escopo do MVP for reconfirmado |
-| CHANGE-REPORT | **Aprovar** | — |
+| DOC-001 | **Aprovado com ações abertas** | §5.1, §5.2 e §5.3 permanecem sob revisão até parecer jurídico |
+| DOC-002 | **Aprovado** | PP-13 depende de detalhamento nas Fases 3 e 6 |
+| DOC-003 | **Aprovado** | Reavaliar itens "A validar" após a Fase 2 |
+| DOC-004 | **Aprovado com ações abertas** | GAP-001 a GAP-003 encerrados; GAP-004 a GAP-006 permanecem |
+| DOC-005 | **Aprovado como hipótese a validar** | Validar com o tenant-piloto antes de usar em decisões de UX |
+| DOC-006 | **Aprovado** | Consolidação corrigida; reclassificação apenas por gestão de mudança |
+| DOC-007 | **Aprovado com ações abertas** | Reconfirmar após o levantamento da Fase 2; AC-MVP-11 depende de registro formal de validação |
+| DOC-008 | **Aprovado com ações abertas** | Incluir datas somente após OQ-007 |
+| XLS-001 | **Aprovado** | Manutenção contínua |
+| XLS-002 | **Aprovado** | Reavaliar a cada fase |
+| XLS-003 | **Aprovado** | Atribuir prazos aos responsáveis |
+| XLS-004 | **Aprovado com DEC-011 aprovada** | DEC-001 a DEC-010 permanecem Proposta; conversões futuras exigem instrução explícita |
+| XLS-005 | **Aprovado como estrutura** | Preenchimento a partir da Fase 2 |
+| DIA-001 | **Aprovado** | Atualizar quando o escopo do MVP for reconfirmado |
+| CHANGE-REPORT | **Aprovado** | Formalização final registrada |
 | Overview_Project.md | **Manter como referência não autoritativa** | Patch aplicado; não usar como fonte de requisito, arquitetura, escopo ou conformidade |
 
 ---
@@ -262,20 +270,25 @@ Tratamento adotado: a ABNT NBR 17037 é registrada como **norma técnica**, **n�
 | AC-F1-08 | Contagens coerentes entre documentos e planilhas | Atendido nesta versão (corrigido) |
 | AC-F1-09 | Nenhum ID duplicado ou reaproveitado para conceito diferente | Atendido |
 | AC-F1-10 | Terminologia padronizada aplicada | Atendido (DOC-003 §11) |
-| AC-F1-11 | Aprovação formal da Services.NET | **Pendente — segunda revisão** |
+| AC-F1-11 | Aprovação formal da Services.NET | **Atendido** — Sponsor definido; Product Owner institucional definido; tenant-piloto definido; DEC-011 aprovada; segunda revisão formal concluída |
 
 ---
 
-## 14. Condições para aprovação final da Fase 1
+## 14. Open Actions carried into Phase 2
 
-1. Segunda revisão formal deste pacote v0.2 pela Services.NET.
-2. Patrocinador, Product Owner, autoridade jurídica e DPO designados.
-3. Cliente-piloto confirmado e agenda de levantamento definida.
-4. Solicitações de parecer jurídico, do DPO e de responsável técnico formalmente abertas.
-5. ABNT NBR 17037 adquirida legitimamente.
-6. Questões abertas bloqueantes (OQ-002, OQ-003, OQ-010) respondidas.
-7. Decisão formal sobre governança documental Microsoft 365 × Git (DEC-011).
-8. Decisão explícita da Services.NET sobre converter ou não DEC-001 a DEC-011 para `Aprovada`.
+A Fase 1 está aprovada, mas as ações abaixo permanecem abertas e devem ser carregadas para a etapa seguinte quando a Services.NET autorizar seu início:
+
+1. OQ-004 — extensão da aplicabilidade da NBR 17037.
+2. OQ-005 — metas quantitativas.
+3. OQ-006 — nível probatório/assinaturas.
+4. OQ-007 — equipe, orçamento e prazo.
+5. OQ-009 — validação das personas.
+6. OQ-011 — modelo operacional/SLA.
+7. OQ-012 — confirmação jurídica formal da Portaria GM/MS nº 3.523/1998.
+8. OQ-015 — bases legais da LGPD, retenção e direitos dos titulares.
+9. OQ-020 — mecanismo de preservação do estado de referência do PMOC emitido.
+10. OQ-021 — normas locais, setoriais, contratuais ou situações de uso restrito que afetem Regra A / Regra B.
+11. OQ-022 — interlocutores específicos, disponibilidade, compromisso operacional e agenda da Clima Zero Climatização.
 
 ---
 
@@ -285,4 +298,4 @@ Este pacote é material de engenharia de software. Ele **não** constitui parece
 
 ---
 
-**A Fase 2 não foi iniciada e permanece aguardando nova revisão formal da Services.NET.**
+**A Fase 1 v0.2 está APPROVED WITH OPEN ACTIONS. A Fase 2 não foi iniciada nesta execução.**

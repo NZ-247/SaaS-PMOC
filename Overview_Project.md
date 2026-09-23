@@ -5,12 +5,14 @@ Este documento registra somente a concepção inicial do projeto.
 Em caso de divergência, prevalecem os artefatos formais da Fase 1 do **PMOC Software — Product & Engineering Master Specification** e suas fontes autoritativas declaradas.
 
 Fontes autoritativas vigentes:
-- **Microsoft 365** — documentos executivos, planilhas de governança e visualizações produzidos na Fase 1 (DOC-001 a DOC-008, XLS-001 a XLS-005, DIA-001), até decisão formal em contrário.
-- **Repositório Git** — histórico versionado desta revisão local e futura representação próxima ao código, condicionado à decisão de governança documental registrada como DEC-011 — Proposta.
+- **Microsoft 365** — ambiente de autoria, colaboração, apresentação, visualização executiva, Word, Excel, Power BI e interação com agentes integrados ao ambiente corporativo.
+- **Repositório Git** — baseline técnica autoritativa e versionada dos artefatos de engenharia formalmente publicados/aprovados.
+
+Regra de precedência: em caso de divergência entre uma cópia M365 e uma versão formalmente publicada/aprovada no Git, prevalece a baseline aprovada no Git.
 
 Este documento **não** é fonte autoritativa para requisito, arquitetura, escopo, regra de negócio ou conformidade.
 
-Registrado em: CON-010 (XLS-001), DOC-001 §30 e DEC-011 (XLS-004).
+Registrado em: CON-010 (XLS-001), DOC-001 §30 e DEC-011 — Aprovada (XLS-004).
 
 ---
 
